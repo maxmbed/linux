@@ -1,7 +1,10 @@
 Allwinner A31/H3 SPI controller
 
 Required properties:
-- compatible: Should be "allwinner,sun6i-a31-spi" or "allwinner,sun8i-h3-spi".
+- compatible: should be:
+	- "allwinner,sun6i-a31-spi"
+	- "allwinner,sun8i-h3-spi"
+	- "allwinner,suniv-f1c100s-spi", "allwinner,sun8i-h3-spi"
 - reg: Should contain register location and length.
 - interrupts: Should contain interrupt.
 - clocks: phandle to the clocks feeding the SPI controller. Two are
