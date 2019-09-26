@@ -219,6 +219,11 @@
 				pins = "PF0", "PF1", "PF2", "PF3", "PF4", "PF5";
 				function = "mmc0";
 			};
+
+			rtp_pa_pins: rtp-pa-pins {
+				pins = "PA0", "PA1", "PA2", "PA3";
+				function = "rtp";
+			};
 		};
 
 		timer@1c20c00 {
@@ -232,6 +237,12 @@
 			compatible = "allwinner,suniv-f1c100s-wdt",
 				     "allwinner,sun4i-a10-wdt";
 			reg = <0x01c20ca0 0x20>;
+		};
+
+		rtp: rtp@1c24800 {
+			compatible = "allwinner,sun6i-a31-ts";
+			reg = <0x01c24800 0x100>;
+			interrupts = <20>;
 		};
 
 		uart0: serial@1c25000 {
