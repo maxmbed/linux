@@ -101,3 +101,10 @@
 		remote-endpoint = <&panel_input>;
 	};
 };
+
+&rtp {
+	allwinner,ts-attached;
+	pinctrl-names = "default";
+	pinctrl-0 = <&rtp_pa_pins>;
+	status = "okay";
+};
