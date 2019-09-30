@@ -45,6 +45,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 	};
+
 };
 
 &uart0 {
@@ -106,5 +107,19 @@
 	allwinner,ts-attached;
 	pinctrl-names = "default";
 	pinctrl-0 = <&rtp_pa_pins>;
+	status = "okay";
+};
+
+&otg_sram {
+	status = "okay";
+};
+
+&usb_otg {
+	dr_mode = "host";
+	status = "okay";
+};
+
+&usbphy {
+	usb0_id_det = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
 	status = "okay";
 };
